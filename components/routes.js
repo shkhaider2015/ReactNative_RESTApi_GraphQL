@@ -8,7 +8,6 @@ import RestAPI from "./restAPI";
 
 const Stack = createStackNavigator()
 
-console.log(Stack)
 export default class Routes extends React.Component {
 
     // constructor() {
