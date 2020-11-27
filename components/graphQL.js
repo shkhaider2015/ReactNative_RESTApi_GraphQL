@@ -52,14 +52,14 @@ export default class GraphQL extends React.Component {
     render() {
 
         return (
-            <View>
-                <Text>
+            <View style={{ marginTop : 15, marginBottom : 20, alignItems : 'center' }} >
+                <Text style={{ fontWeight : 'bold', fontSize : 16 }}>
                     Welcome to GraphQL
             </Text>
 
                 <Picker
                     selectedValue={this.state.selectedContinent}
-                    style={{ width: 300, height: 50 }}
+                    style={{ width: 190, height: 50 }}
                     onValueChange={(itemValue, itemIndex) => this.setState({ selectedContinent: itemValue })}
                 >
                     <Picker.Item label="Select Continents" value="select" />
@@ -71,11 +71,11 @@ export default class GraphQL extends React.Component {
 
                 </Picker>
 
-                <Text> Countries List</Text>
+                <Text style={{ fontSize : 12, fontWeight : 'bold' }} > Countries List</Text>
                 <FlatList 
                 data={this.state.selectedContinent.countries}
-                renderItem={({ item }) => ( <Text> {item.name} </Text> ) }
-                keyExtractor={item => item.index}
+                renderItem={({ item }) => ( <Text > {item.name} </Text> ) }
+                keyExtractor={(item, index) => index.toString()}
                 />
 
 

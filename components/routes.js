@@ -4,15 +4,12 @@ import {createStackNavigator } from "@react-navigation/stack"
 import Home from "./main";
 import GraphQL from "./graphQL";
 import RestAPI from "./restAPI";
+import MultipleAPI from "./multipleAPI";
 
 
 const Stack = createStackNavigator()
 
 export default class Routes extends React.Component {
-
-    // constructor() {
-    //     Stack = createStackNavigator();
-    // }
 
     render() {
         return (
@@ -22,6 +19,8 @@ export default class Routes extends React.Component {
                     <Stack.Screen name="Home" component={Home} />
                     <Stack.Screen name="RestAPI" component={RestAPI} />
                     <Stack.Screen name="GraphQL" component={GraphQL} />
+                    <Stack.Screen name="MultiAPIPromise" component={MultipleAPI} />
+
 
                 </Stack.Navigator>
             

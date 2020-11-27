@@ -7,7 +7,6 @@ export default class Home extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Welcome Home</Text>
                 <View style={styles.buttons}>
                 <Button 
                 title="RestAPI"
@@ -20,6 +19,13 @@ export default class Home extends React.Component {
                 title="GraphQL"
                 color="#FC8D8D"
                 onPress={ () => this.props.navigation.navigate("GraphQL") }
+                />
+                </View>
+                <View style={styles.buttons}  >
+                <Button
+                title="Multiple API Promise"
+                color="#C8D149"
+                onPress={ () => this.props.navigation.navigate("MultiAPIPromise") }
                 />
                 </View>
                 <StatusBar style="auto" />
